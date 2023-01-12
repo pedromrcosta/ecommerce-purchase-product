@@ -1,0 +1,33 @@
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
+    url: jdbc:h2:file:/ecommerce_bootcamp
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost:3306/project_ecommerce
+#    username: root
+#    password: root@mysql
+  jpa:
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: false
+
+management:
+  server:
+    port: 8080
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include:
+        - info
+        - health
+  info:
+    env:
+      enabled: true
+
+info:
+  Name: Pedro's Shopi
+  City: Leiria
+  Country: Portugal
